@@ -1,9 +1,9 @@
 <div class= 'container'>
   <h1>Choose a restaurant</h1>
 
-  <ul>
+  <ul class="list-group">
     <% @restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %> <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%></li>
+    <li class="list-group-item"><%= restaurant.name %> - <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%></li>
     <% end %>
   </ul>
 
