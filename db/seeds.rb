@@ -11,8 +11,11 @@ Restaurant.destroy_all
 puts 'Creating restaurants...'
 dishoom = { name: 'Dishoom', address: '7 Boundary St, London E2 7JE', phone_number: '0836656565', category: 'chinese' }
 pizza_east = { name: 'Pizza East', address: '56A Shoreditch High St, London E1 6PQ', phone_number: '0736656565', category: 'italian' }
+relais_faumont = { name: 'Relais de Faumont', address: 'Faumont', phone_number: '0336656565', category: 'french' }
+leon = { name: 'Leon', address: 'Bruxelles', phone_number: '0236656565', category: 'belgian' }
+tao = { name: 'Tao', address: 'Tokyo', phone_number: '0136656565', category: 'japanese' }
 
-[dishoom, pizza_east].each do |attributes|
+[dishoom, pizza_east, relais_faumont, leon, tao].each do |attributes|
   restaurant = Restaurant.create!(attributes)
   puts "Created #{restaurant.name}"
 end
