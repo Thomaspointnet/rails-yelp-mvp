@@ -1,12 +1,14 @@
-<h1><%= @restaurant.name %></h1>
-<h2> <%= "It is a #{@restaurant.category} restaurant." %> </h2>
-<h4> <%= "Phone number: #{@restaurant.phone_number}." %> </h4>
-<h4> <%= "Address: #{@restaurant.address}." %> </h4>
-<h2>Reviews</h2>
-<ul class="list-group">
-  <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.content %> - <%= review.rating %>/5</li>
-  <% end %>
-</ul>
-<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
-<%= link_to 'Back', restaurants_path %>
+<div class= 'container'>
+  <h1><%= @restaurant.name %></h1>
+  <h2> <%= "It is a #{@restaurant.category} restaurant." %> </h2>
+  <h4> <%= "Phone number: #{@restaurant.phone_number}." %> </h4>
+  <h4> <%= "Address: #{@restaurant.address}." %> </h4>
+  <h2>Reviews</h2>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item"><%= review.content %> - <%= review.rating %>/5</li>
+    <% end %>
+  </ul>
+  <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class: "btn btn-success" %>
+  <%= link_to 'Back', restaurants_path, class: "btn btn-primary" %>
+</div>
